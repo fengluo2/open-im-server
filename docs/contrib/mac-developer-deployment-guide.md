@@ -45,7 +45,7 @@ Homebrew is an essential package manager for macOS. Install it using:
    git config --global user.email "your.email@example.com"
    ```
 
-<<<<<<< HEAD
+ HEAD
 =======
 ### Forking and Cloning the Repository
 
@@ -57,7 +57,14 @@ To optimize and add logic to your instructions, particularly regarding deploying
    Open your terminal and execute the following commands:
 
    ```sh
-   # Clone the repository
+   git clone https://github.com/<your-username>/open-im-server.git
+
+   # Set Docker bridging network mode for Mac
+   export DOCKER_BRIDGE_SUBNET=127.0.0.0/16
+   export OPENIM_IP=<your-ip>
+   make init
+   docker compose up -d
+   make start
    git clone https://github.com/<your-username>/open-im-server.git
 
    # Set Docker bridging network mode for Mac
